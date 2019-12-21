@@ -20,7 +20,7 @@ var Route_Entries = Routes{
 	Route{
 		"EnginesIndex",
 		"GET",
-		"/engies",
+		"/engines",
 		route_handlers.GetEngines,
 	},
 }
