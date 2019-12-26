@@ -7,7 +7,7 @@ import (
 	"github.com/isgo-golgo13/gorilla-restsvc/data"
 )
 
-//IndexHandler
+/** GET /engines */
 func GetEngines(w http.ResponseWriter, r *http.Request) {
 	engines := []data.Engine{
 		{

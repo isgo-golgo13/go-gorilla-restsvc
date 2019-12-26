@@ -17,5 +17,5 @@ COPY --from=stage /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 WORKDIR /root/
 COPY --from=stage /gorilla-restsvc .
 # healthcheck
-HEALTHCHECK CMD curl --fail http://localhost:3000/ || exit 1
+HEALTHCHECK CMD curl --fail http://localhost:8080/ || exit 1
 CMD ["./service"]
