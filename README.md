@@ -43,21 +43,21 @@ Execute `docker-compose up` and at a new shell issue : `curl -v or curl  http://
 
 1) Build the Docker image locally :
 
-`docker build -t gorilla-restsvc:1.0 .`
+    `docker build -t gorilla-restsvc:1.0 .`
 
 2) Login to DockerHub account :
 
-`docker login -u <DockerHub-User> -p <DockerHub-Password>`
+    `docker login -u <DockerHub-User> -p <DockerHub-Password>`
 
 3. Tag the built Docker image 
 
-`docker tag <image> <DockerHub-User>/<Docker-Image-Name>:<tag>`
+    `docker tag <image> <DockerHub-User>/<Docker-Image-Name>:<tag>`
 
-`docker tag <image> isgogolgo13/gorilla-restsvc:1.0`
+    `docker tag <image> isgogolgo13/gorilla-restsvc:1.0`
 
 4. Push the locally built Docker image to the DockerHub 
 
-`docker push isgogolgo13/gorilla-restsvc`
+    `docker push isgogolgo13/gorilla-restsvc`
 
 5. Done
 
