@@ -37,3 +37,34 @@ Execute `docker-compose up` and at a new shell issue : `curl -v or curl  http://
 ** Recall to issue a `docker-compose stop` and follow with `docker system prune -a` to stop and delete all docker images from the host.
 
 ** To exec into the docker container issue : `docker run -it gorilla-svc:1.0 /bin/sh`
+
+
+## Push Docker image to DockerHub 
+
+1) Build the Docker image locally :
+
+`docker build -t gorilla-restsvc:1.0 .`
+
+2) Login to DockerHub account :
+
+`docker login -u <DockerHub-User> -p <DockerHub-Password>`
+
+in the case of this DockerHub owner acccount :
+
+`docker login -u isgogolgo13 -p Spartacus72!`
+
+3. Tag the built Docker image 
+
+`docker tag <image> <DockerHub-User>/<Docker-Image-Name>:<tag>`
+
+`docker tag <image> isgogolgo13/gorilla-restsvc:1.0`
+
+4. Push the locally built Docker image to the DockerHub 
+
+`docker push isgogolgo13/gorilla-restsvc`
+
+5. Done
+
+
+
+
