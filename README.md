@@ -49,10 +49,6 @@ Execute `docker-compose up` and at a new shell issue : `curl -v or curl  http://
 
 `docker login -u <DockerHub-User> -p <DockerHub-Password>`
 
-in the case of this DockerHub owner acccount :
-
-`docker login -u isgogolgo13 -p Spartacus72!`
-
 3. Tag the built Docker image 
 
 `docker tag <image> <DockerHub-User>/<Docker-Image-Name>:<tag>`
