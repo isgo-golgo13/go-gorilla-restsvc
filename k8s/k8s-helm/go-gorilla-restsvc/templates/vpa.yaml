@@ -1,0 +1,15 @@
+{{- /*
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: {{ include "go-gorilla-restsvc.fullname" . }}
+spec:
+  targetRef: 
+    apiVersion: "extensions/v1"
+    kind: Deployment
+    name: {{ include "go-gorilla-restsvc.fullname" . }}
+  upadatePolicy:
+    updateMode: {{ .Values.updatePolicy.updateMode }}
+
+*/}}
+    
