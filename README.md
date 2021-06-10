@@ -78,12 +78,13 @@ docker run --name go-chi-restsvc -p 8080:8080 isgogolgo13/go-gorilla-restsvc:1.0
 ```
 
 ## Executing the Pulled Docker Container Image
-```
+
 At a new shell issue : 
 ```
 curl -v http://localhost:8080/v1/api/engines/
 ```
 The service http JSON response shows this response payload and with -v option to curl you will seen http status code `200 OK` : 
+
 ```
 [{"id":"100000001","serial_id":"VW_100000001_QUATTRO","configuration":"V8"}]
 ```
