@@ -19,24 +19,25 @@ At shell go to project root : `make clean`
 `[{"id":"100000001","serial_id":"VW_100000001_QUATTRO","configuration":"V8"}]`
 
 
-## Compiling go-gorilla-restsvc project (as Docker) image
+## Compiling to Docker Container Image
 
-To build the Docker image from the Dockerfile issue : 
-`docker build -t go-gorilla-restsvc:<tag> .` where `<tag>` is a major.minor number such as `1.0`.
-
-
-## Executing the go-gorilla-restsvc project (as a Docker) service
-
-To execute the Docker service container issue : `docker run --name go-gorilla-restsvc -p 8080:8080 go-gorilla-restsvc:<tag>` and at a new shell issue : `curl -v or curl  http://localhost:8080/engines/`.
+To build the Docker image from the Dockerfile issue : `docker build -t go-gorilla-svc:<tag> .` where `<tag>` is a major.minor number such as `1.0`.
 
 
-## Compiling/Executing the go-gorilla-restsvc project (as a Docker) service
+## Executing the Docker Container Image
 
-Execute `docker-compose up` and at a new shell issue : `curl -v or curl  http://localhost:8080/engines/`.
-
-** Recall to issue a `docker-compose stop` and follow with `docker system prune -a` to stop and delete all docker images from the host.
-
-** To exec into the docker container issue : `docker run -it go-gorilla-restsvc:1.0 /bin/sh`
+To execute the Docker service container issue : 
+```
+docker run --name go-gorilla-svc -p 8080:8080 isgogolgo13/go-gorilla-svc:<tag>
+```
+and at a new shell issue : 
+```
+curl -v http://localhost:8080/v1/api/engines/
+```
+The service http JSON response shows this response payload and with -v option to curl you will seen http status code `200 OK` : 
+```
+[{"id":"100000001","serial_id":"VW_100000001_QUATTRO","configuration":"V8"}]
+```
 
 
 ## Push Docker image to DockerHub 
@@ -60,6 +61,20 @@ Execute `docker-compose up` and at a new shell issue : `curl -v or curl  http://
     `docker push isgogolgo13/go-gorilla-restsvc`
 
 5. Done
+
+
+## Pull and Execute Docker Container Image from DockerHub
+
+### (1) Pull the Docker Container Image
+```
+docker pull isgogolgo13/go-gorilla-restsvc:1.0
+```
+
+or
+
+## (1b) Directly Execute the Docker Container Image from DockerHub
+```
+docker run --name go-chi-restsvc -p 8080:8080 isgogolgo13/go-gorilla-restsvc:1.0
 
 
 
