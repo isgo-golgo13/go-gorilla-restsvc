@@ -2,16 +2,16 @@
 Go (1.15.x) REST service using Gorilla web router toolkit
 
 
-## Compiling go-gorilla-restvc project 
+## Compiling the service
 
 At shell go to project root : `make compile` as this executes 
 `go build github.com/isgo-golgo13/go-gorilla-restsvc/cmd/service` in the compile step in the Makefile.
 
-## Cleaning go-gorilla-restsvc project service
+## Cleaning the service
 At shell go to project root : `make clean`
 
 
-## Executing the go-gorilla-restsvc project service
+## Executing the service
 1) At shell go to project root and issue `./service` and this will start the service listening on port 8080
 2) At a new shell issue : `curl -v or curl  http://localhost:8080/engines/`.
 
