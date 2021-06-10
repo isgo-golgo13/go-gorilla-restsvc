@@ -65,14 +65,14 @@ The service http JSON response shows this response payload and with -v option to
 
 ## Pull and Execute Docker Container Image from DockerHub
 
-### (1) Pull the Docker Container Image
+### (1a) Pull the Docker Container Image
 ```
 docker pull isgogolgo13/go-gorilla-restsvc:1.0
 ```
 
 or
 
-## (1b) Directly Execute the Docker Container Image from DockerHub
+### (1b) Directly Execute the Docker Container Image from DockerHub
 ```
 docker run --name go-chi-restsvc -p 8080:8080 isgogolgo13/go-gorilla-restsvc:1.0
 
