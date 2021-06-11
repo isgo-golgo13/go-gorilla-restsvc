@@ -32,7 +32,7 @@ docker run --name go-gorilla-svc -p 8080:8080 isgogolgo13/go-gorilla-svc:<tag>
 ```
 and at a new shell issue : 
 ```
-curl -v http://localhost:8080/v1/api/engines/
+curl -v http://localhost:8080/engines/
 ```
 The service http JSON response shows this response payload and with -v option to curl you will seen http status code `200 OK` : 
 ```
@@ -81,10 +81,14 @@ docker run --name go-chi-restsvc -p 8080:8080 isgogolgo13/go-gorilla-restsvc:1.0
 
 At a new shell issue : 
 ```
-curl -v http://localhost:8080/v1/api/engines/
+curl -v http://localhost:8080/engines/
 ```
 The service http JSON response shows this response payload and with -v option to curl you will seen http status code `200 OK` : 
 
 ```
 [{"id":"100000001","serial_id":"VW_100000001_QUATTRO","configuration":"V8"}]
 ```
+
+
+## Execute the service (actively running in K8s)
+
