@@ -34,7 +34,7 @@ Create chart name and version as used by the chart label.
 Common labels
 */}}
 {{- define "go-gorilla-restsvc.labels" -}}
-helm.sh/chart: {{ include "go-chi-restsvc.chart" . }}
+helm.sh/chart: {{ include "go-gorilla-restsvc.chart" . }}
 {{ include "go-gorilla-restsvc.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
